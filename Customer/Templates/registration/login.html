@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    {% comment %} {% load crispy_forms_tags %} {% endcomment %}
+    <head>
+        <meta charset="utf-8">
+        <title>CUSTOMER LOYALTY REWARDS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="index.html">
+                                    SKYBOOK
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            {% comment %} <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                                </div>
+                            </div> {% endcomment %}
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero row align-items-center">
+                        <div class="col-md-7">
+                            <h2><span>Welcome</span> Back!</h2>
+                            <p>Enjoy amazing rewards and benefits for each and every trips through us.</p>
+                            {% comment %} <a class="btn" href="">Explore Now</a> {% endcomment %}
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form">
+                                <h3>Login</h3><br>
+                                <form method="POST" action="">
+                                    {% csrf_token %}
+                                    <input name="username" class="form-control" type="text" placeholder="User Email" required="">
+                                    <input name="password" class="form-control" type="password" placeholder="Password"  required="">
+                                    <div class="control-group">
+                                        {% comment %} <select class="custom-select">
+                                            <option selected>Choose a service</option>
+                                            <option value="1">House Cleaning</option>
+                                            <option value="2">Apartment Cleaning</option>
+                                            <option value="3">Office Cleaning</option>
+                                        </select> {% endcomment %}
+                                    </div>
+                                    {% comment %} <textarea class="form-control" placeholder="Comment"></textarea> {% endcomment %}
+                                    <button class="btn btn-block">Login</button>
+                                    <a href="#" style="color:#fff;">forget password?</a>
+                                    <center><br>
+                                        <h6 style="color:#fff;">Not a member ? Don't worry</h6>
+                                        <a href="{% url 'Customer:signup' %}" style="color:#fff;"><u>Enroll now</u></a><br>
+                                    </center>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+            
+            
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
